@@ -8,6 +8,6 @@ RssFeedWidgetComponent = Ember.Component.extend
   # width, length, xpos, ypos computed properties?
 
   didInsertElement: ->
-    debugger
+    # debugger
 
 `export default RssFeedWidgetComponent`

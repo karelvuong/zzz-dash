@@ -1,27 +1,7 @@
 {{partial "header"}}
 
 <div class="site">
-  <div class="dashboard-row row">
-    <div class="block--dashboard x-1 col-4 y-1 row-2"></div>
-    <div class="block--dashboard x-1 col-4 y-3 row-2">
-
-
-
-
-
-
-
-
-
-    </div>
-
-    <div class="block--dashboard x-5 col-3 y-1 row-1"></div>
-    <div class="block--dashboard x-5 col-3 y-2 row-2"></div>
-    <div class="block--dashboard x-5 col-3 y-4 row-1"></div>
-
-    <div class="block--dashboard x-8 col-5 y-1 row-4"></div>
-  </div>
+  {{outlet}}
 </div>
 
-{{outlet}}
 {{outlet 'modal'}}

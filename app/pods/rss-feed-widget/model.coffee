@@ -27,7 +27,8 @@ RssFeedWidget = DS.Model.extend
             publishedDate: entry.publishedDate
         @get('store').commit()
 
-RssFeedWidget.reopenClass
+RssFeedWidget.reopenClass({
+>>>>>>> Stashed changes
   FIXTURES: [
     id: 1
     name: 'CodeBrief'
@@ -37,5 +38,6 @@ RssFeedWidget.reopenClass
     name: 'GroupTalent Blog'
     url: 'https://grouptalent.com/blog/feed.xml'
   ]
+})
 
 `export default RssFeedWidget`

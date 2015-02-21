@@ -1,6 +1,11 @@
 <header class="header--site">
-  {{#link-to 'index'}}<i class="header--site-logo oi" data-glyph="grid-three-up"></i>{{/link-to}}
-  <a class="header--site-link" href="#">Settings</a>
-  <a class="header--site-link" href="#">Add</a>
-  <a class="header--site-link" href="#">Karel Vuong</a>
+  <div class="header--site-left pull-left">
+    {{#link-to 'index' class="header--site-link"}}<i class="header--site-logo oi" data-glyph="grid-three-up"></i>{{/link-to}}
+  </div>
+
+  <div class="header--site-right pull-right">
+    <a class="header--site-link" href="#">Settings</a>
+    <a class="header--site-link" href="#"><i class="oi" data-glyph="plus"></i></a>
+    <a class="header--site-link" href="#"><strong>Karel Vuong</strong></a>
+  </div>
 </header>

@@ -1,9 +1,6 @@
 `import Ember from 'ember'`
 
-IndexRoute = Ember.Route.extend
-  model: ->
-    return Em.Object.create({name: 'Mitch'})
-
+ApplicationRoute = Ember.Route.extend
   actions:
     openModal: (modalName, model) ->
       @controllerFor(modalName).set('model', model);
@@ -17,4 +14,4 @@ IndexRoute = Ember.Route.extend
         outlet: 'modal',
         parentView: 'application'
 
-`export default IndexRoute`
+`export default ApplicationRoute`

@@ -1,11 +1,11 @@
 `import DS from 'ember-data'`
 # `import FeedItem from './mixins/foo'`
 
-RssFeedWidget = DS.Model.extend {
+RssFeedWidget = DS.Model.extend
   name: DS.attr 'string'
   url: DS.attr 'string'
 
-  # feedItems: DS.hasMany('FeedItem'),
+  # feedItems: DS.hasMany('FeedItem')
 
   refresh: Ember.observer ->
     url = @get 'url'
@@ -26,8 +26,6 @@ RssFeedWidget = DS.Model.extend {
             link: entry.link
             publishedDate: entry.publishedDate
         @get('store').commit()
-  }
-}
 
 RssFeedWidget.FIXTURES = [
   id: 1

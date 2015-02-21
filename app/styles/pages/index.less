@@ -13,10 +13,44 @@ body > .ember-view {
 }
 
 .block--dashboard {
-  border: 1px solid;
+  border: 1px solid #ddd;
   position: absolute;
   z-index: 1;
 }
+  .block--dashboard-header {
+    background-color: #fff;
+    padding: 5px;
+  }
+
+  .block--dashboard-header-icon,
+  .block--dashboard-header-title {
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+  }
+
+  .block--dashboard-header-icon {
+    margin-right: 10px;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    width: 30px;
+  }
+
+  .block--dashboard-header-title {
+    line-height: 30px;
+  }
+
+  // Accents
+  .accent--designer-news {
+    .block--dashboard-header-icon  { background-color: #3473D6; color: #fff; }
+    .block--dashboard-header-title { color: #3473D6; }
+  }
+
+  .accent--cosmopolitan {
+    .block--dashboard-header-icon  { background-color: #ED008C; color: #fff; }
+    .block--dashboard-header-title { color: #ED008C; }
+  }
 
 // Offset
 .x-1  { left: 0%; }

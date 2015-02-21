@@ -1,6 +1,9 @@
 <header class="header--site">
   <div class="header--site-left pull-left">
-    {{#link-to 'index' class="header--site-link"}}<i class="header--site-logo oi" data-glyph="grid-three-up"></i>{{/link-to}}
+    {{#link-to 'index' class="header--site-link pull-left"}}<i class="header--site-logo oi" data-glyph="grid-three-up"></i>{{/link-to}}
+    <div class="header--site-spaces pull-left">
+      {{view "spaces"}}
+    </div>
   </div>
 
   <div class="header--site-right pull-right">

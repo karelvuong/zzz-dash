@@ -1,6 +1,5 @@
 .header--site {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  background-color: @header-bg-color;
   height: 40px;
   position: fixed;
   top: 0;
@@ -8,9 +7,19 @@
   width: 100%;
   z-index: 1;
 }
+  .header--site-right {
+    padding-right: 20px;
+  }
   .header--site-logo {
+    color: @header-logo-color;
     margin: 0 10px;
   }
   .header--site-link {
+    color: @header-link-color;
+    font-size: 12px;
     line-height: 40px;
+
+    & + & {
+      margin-left: 10px;
+    }
   }

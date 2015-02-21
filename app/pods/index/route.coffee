@@ -4,8 +4,6 @@
 IndexRoute = Ember.Route.extend
   model: ->
     # return Em.Object.create({name: 'Mitch'})
-    debugger
-    return RssFeedWidget.find()
-    # return @modelFor 'rss-feed-widget'
+    return RssFeedWidget
 
 `export default IndexRoute`

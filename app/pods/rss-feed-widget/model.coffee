@@ -7,7 +7,7 @@ RssFeedWidget = DS.Model.extend
 
   # feedItems: DS.hasMany('FeedItem')
 
-  refresh: Ember.observer ->
+  refresh: ->
     url = @get 'url'
     googleUrl = document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url);
     $.ajax
@@ -27,14 +27,15 @@ RssFeedWidget = DS.Model.extend
             publishedDate: entry.publishedDate
         @get('store').commit()
 
-RssFeedWidget.FIXTURES = [
-  id: 1
-  name: 'CodeBrief'
-  url: 'http://codebrief.com/atom.xml'
-,
-  id: 2
-  name: 'GroupTalent Blog'
-  url: 'https://grouptalent.com/blog/feed.xml'
-]
+RssFeedWidget.reopenClass
+  FIXTURES: [
+    id: 1
+    name: 'CodeBrief'
+    url: 'http://codebrief.com/atom.xml'
+  ,
+    id: 2
+    name: 'GroupTalent Blog'
+    url: 'https://grouptalent.com/blog/feed.xml'
+  ]
 
 `export default RssFeedWidget`

@@ -28,7 +28,6 @@ RssFeedWidget = DS.Model.extend
         @get('store').commit()
 
 RssFeedWidget.reopenClass({
->>>>>>> Stashed changes
   FIXTURES: [
     id: 1
     name: 'CodeBrief'

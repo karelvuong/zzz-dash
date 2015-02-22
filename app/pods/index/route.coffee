@@ -3,9 +3,24 @@
 
 IndexRoute = Ember.Route.extend
   model: ->
-    # return Em.Object.create({name: 'Mitch'})
-    debugger
-    return @store.find 'dashboard'
-    # return @modelFor 'rss-feed-widget'
+    $.ajax
+      url: 'https://api.github.com/repos/karelvuong/fox/releases',
+      type: 'get'
+
+  afterModel: (model) ->
+    $.ajax
+      url: 'https://api.github.com/markdown'
+      type: 'POST'
+      contentType: 'application/x-www-form-urlencoded'
+      dataType: 'text',
+      data: JSON.stringify
+        text: 'test'
+        mode: 'gfm'
+        context: 'karelvuong/fox'
+    .then (text) ->
+      model.body_html = text
+      debugger
+      console.log model
+      model
 
 `export default IndexRoute`
